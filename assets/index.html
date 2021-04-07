@@ -70,6 +70,10 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"><img src="/assets/images/slider01.jpg" alt="슬라이더 01"></div>
 						<div class="swiper-slide"><img src="/assets/images/slider02.jpg" alt="슬라이더 02"></div>
+						<div class="swiper-slide"><img src="/assets/images/slider02.jpg" alt="슬라이더 02"></div>
+						<div class="swiper-slide"><img src="/assets/images/slider02.jpg" alt="슬라이더 02"></div>
+						<div class="swiper-slide"><img src="/assets/images/slider02.jpg" alt="슬라이더 02"></div>
+						<div class="swiper-slide"><img src="/assets/images/slider02.jpg" alt="슬라이더 02"></div>
 					</div>
 				</div>
 
@@ -99,6 +103,17 @@
 						},
 						slideChangeTransitionEnd: function() {
 							console.log(2);
+
+							if (this.activeIndex == 3){
+								//3번 슬라이더 일 때
+								alert('와우!');
+							}
+
+							if (this.activeIndex == 5){
+								//3번 슬라이더 일 때
+								console.log('5번슬라이더다!');
+							}
+
 						}
 					}
 				});
