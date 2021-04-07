@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1440, initial-scale=1.0">
+
+	<title>도미노 피자 클론코딩</title>
+
+	<link rel="stylesheet" href="/assets/css/core.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+
+		<header id="header">
+			<div class="container">
+				<div class="system-block">
+					<div class="logo">
+						<h1 class="title">
+							<span class="blind">도미노피자</span>
+						</h1>
+					</div>
+					<div class="location">
+						<i class="icon"></i>
+						논현로 123길 35-1
+					</div>
+					<div class="util">
+						<ul>
+							<li><a href="#">로그인</a></li>
+							<li><a href="#"></a>회원가입</li>
+							<li>
+								<select name="" id="">
+									<option value="kor">KOR</option>
+									<option value="eng">ENG</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="gnb-block">
+					<nav class="gnb">
+						<ul>
+							<li><a href="#">메뉴</a></li>
+							<li><a href="#">e-쿠폰</a></li>
+							<li><a href="#">상품권 선물</a></li>
+							<li><a href="#">이벤트·제휴</a></li>
+							<li><a href="#">매장검색</a></li>
+						</ul>
+					</nav>
+
+					<div class="view-more">
+						<a href="#">더보기 <i class="icon"></i></a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="allmenu">
+			전체메뉴
+		</div>
+
+		<!-- 메인은 무조건 한번만 씀 -->
+		<main id="main">
+			<section class="sec-mainslider">
+
+				<div class="swiper-container mainSlider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="/assets/images/slider01.jpg" alt="슬라이더 01"></div>
+						<div class="swiper-slide"><img src="/assets/images/slider02.jpg" alt="슬라이더 02"></div>
+					</div>
+				</div>
+
+				<div class="navigation">
+					<!-- aria-label : 기계가 읽을 수 있다 -->
+					<button class="arrows prev" aria-label="이전 슬라이더"></button>
+					<button class="arrows next" aria-label="다음 슬라이더"></button>
+				</div>
+
+			</section>
+
+			<script>
+				var secMainSlider = new Swiper('.sec-mainslider .mainSlider', {
+					loop: true,
+					slidesPerView: 1,
+					navigation: {
+						nextEl: '.sec-mainslider .next',
+						prevEl: '.sec-mainslider .prev'
+					},
+					on: { // on이라는 파라미터
+						init: function() { // init : 초기화된 직후(그래서 새로고침하면 실행됨)
+							console.log(this.slides[this.activeIndex]); //this 나 자신의 정보를 가져옴, .으로 연결함, 값을 여러개 갖고올 수 있음
+							// $(this.slides[this.activeIndex])
+						},
+						slideChange: function() { // 슬라이드가 움직였을때
+							console.log(this);
+						},
+						slideChangeTransitionEnd: function() {
+							console.log(2);
+						}
+					}
+				});
+			</script>
+
+			<section>
+				<div class="container">
+					<ul>
+						<li>
+							<div class="icon"></div>
+							<h2 class="title">배달 주문<span class="btn"></span></h2>
+							<div class="text">등급별 최대 30%</div>
+						</li>
+						<li>
+							<div class="icon"></div>
+							<h2 class="title">포장 주문<span class="btn"></span></h2>
+							<div class="text">등급별 최대 40%</div>
+						</li>
+						<li>
+							<div class="icon"></div>
+							<h2 class="title">퀵오더<span class="btn"></span></h2>
+							<div class="text">자주 이용하는 메뉴를 <br>더 빠르게 주문해보세요!</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="container">
+					<div class="text-wrap">
+						<h2 class="title">도미노피자의<br><span class="bold">특별한 매니아 혜택</span><br>
+							누려보세요!</h2>
+						<div class="login">로그인</div>
+					</div>
+					<div class="slider-wrap">
+						<div class="img"><img src="" alt=""></div>
+						<div class="img"><img src="" alt=""></div>
+						<div class="img"><img src="" alt=""></div>
+						<div class="img"><img src="" alt=""></div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer id="footer"></footer>
+
+	</div>
+</body>
+</html>
