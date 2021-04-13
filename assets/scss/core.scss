@@ -137,7 +137,14 @@
 	}
 
 	.sec-order {
-		ul {}
+		padding: 56px 0;
+		ul {
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 1000px;
+		}
 
 		li {
 			.icon {
@@ -146,13 +153,35 @@
 			}
 
 			.title {
+				padding-top: 5px;
 				font-weight: 400;
 				font-size: 42px;
 				letter-spacing: -4px;
-				.icon {}
+				.btn-icon {
+					position: relative;
+					left: 9px;
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					i {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%,-50%);
+						font-family: 'ionicons';
+						font-size: 24px;
+						color: #fff;
+					}
+				}
 			}
 
-			.text {}
+			.text {
+				padding-top: 17px;
+				font-size: 16px;
+				line-height: 1.5;
+				color: #888;
+			}
 		}
 
 		.order-list.list01 {
@@ -164,7 +193,9 @@
 
 			.title {
 				color: #ff143c;
-				.icon {}
+				.btn-icon {
+					background-color: #ff143c;
+				}
 			}
 
 			.text {}
@@ -178,7 +209,9 @@
 
 			.title {
 				color: #1382ff;
-				.icon {}
+				.btn-icon {
+					background-color: #1382ff;
+				}
 			}
 
 			.text {}
@@ -192,7 +225,9 @@
 
 			.title {
 				color: #000;
-				.icon {}
+				.btn-icon {
+					background-color: #000;
+				}
 			}
 
 			.text {}

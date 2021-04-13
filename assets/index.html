@@ -71,6 +71,7 @@
 		<!-- 메인은 무조건 한번만 씀 -->
 		<main id="main">
 			<section class="sec-mainslider">
+				<h2 class="blind">도미노 피자 메인 슬라이드 배너</h2>
 
 				<div class="swiper-container mainSlider">
 					<div class="swiper-wrapper">
@@ -133,7 +134,7 @@
 						<li class="order-list list02">
 							<div class="icon"></div>
 							<h2 class="title">포장 주문<span class="btn-icon"><i class="ion-ios-arrow-right"></i></span></h2>
-							<div class="text">등급별 최대 40%</div>
+							<div class="text">등급별 최대 40%<br>화끈한 화요일 40%</div>
 						</li>
 						<li class="order-list list03">
 							<div class="icon"></div>
@@ -144,21 +145,35 @@
 				</div>
 			</section>
 
-			<section>
+			<section class="sec-benefits">
 				<div class="container">
 					<div class="text-wrap">
 						<h2 class="title">도미노피자의<br><span class="bold">특별한 매니아 혜택</span><br>
 							누려보세요!</h2>
 						<div class="login">로그인</div>
 					</div>
-					<div class="slider-wrap">
-						<div class="img"><img src="" alt=""></div>
-						<div class="img"><img src="" alt=""></div>
-						<div class="img"><img src="" alt=""></div>
-						<div class="img"><img src="" alt=""></div>
+					<div class="swiper-container benefitsSlider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="/assets/images/main_card1.png" alt="슬라이더 01"></div>
+							<div class="swiper-slide"><img src="/assets/images/main_card2.gif" alt="슬라이더 02"></div>
+							<div class="swiper-slide"><img src="/assets/images/main_card3.png" alt="슬라이더 03"></div>
+							<div class="swiper-slide"><img src="/assets/images/main_card5.png" alt="슬라이더 03"></div>
+						</div>
 					</div>
 				</div>
 			</section>
+
+			<script>
+				var secMainSlider = new Swiper('.sec-benefits .benefitsSlider', {
+					loop: false,
+					slidesPerView: 4.5,
+					navigation: {
+						nextEl: '.sec-benefits .next',
+						prevEl: '.sec-benefits .prev'
+					}
+				});
+			</script>
+
 		</main>
 
 		<footer id="footer"></footer>
