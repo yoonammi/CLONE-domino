@@ -87,6 +87,8 @@
 					<button class="arrows next" aria-label="다음 슬라이더"></button>
 				</div>
 
+				<div class="swiper-pagination"></div>
+
 			</section>
 
 			<script>
@@ -96,6 +98,13 @@
 					navigation: {
 						nextEl: '.sec-mainslider .next',
 						prevEl: '.sec-mainslider .prev'
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						type: 'fraction',
+					},
+					autoplay: {
+						delay: 5000,
 					},
 					on: { // on이라는 파라미터
 						init: function() { // init : 초기화된 직후(그래서 새로고침하면 실행됨)
